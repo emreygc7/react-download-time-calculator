@@ -1,0 +1,89 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #eee;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.speedContainer, .fileSizeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.speedContainer div, .fileSizeContainer div {
+    display: flex;
+    gap: .5rem;
+}
+
+.decreaseBtn, .increaseBtn {
+    padding: .2rem .7rem;
+    background-color: #0F172A;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.decreaseBtn:hover, .increaseBtn:hover{
+    background-color: #273046;
+}
+
+.speedInput, .fileSizeInput {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #0F172A;
+    -moz-appearance: textfield;
+}
+
+.speedInput:focus, .fileSizeInput:focus{
+    border: none;
+}
+
+.selectBox {
+    background: #0F172A;
+    color: white;
+    border: none;
+    width: 4rem;
+}
+
+
+
+.calculateBtn{
+    background-color: #0F172A;
+    color: white;
+    border: none;
+    padding: .5rem .7rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculateBtn:hover{
+    background-color: #273046;
+    transition: all .3s ease-in-out;
+}
+
+.resultContainer{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+
+@media screen and (min-width: 1366px)  {
+    .mainContainer{
+        height: 100vh;
+        justify-content:center;
+        gap: 4rem;
+        background-color: transparent;
+        margin-right: 15rem;
+    }
+    .speedContainer, .fileSizeContainer{
+        gap: 1rem;
+    }
+}
+

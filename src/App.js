@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { calculatorContext } from "./context/CalculatorContext";
+import Speed from "./components/Speed";
+import FileSize from "./components/FileSize";
+import Result from "./components/Result";
+import { Toaster } from "react-hot-toast";
+import style from "./assests/styles/main.module.css";
 
 function App() {
+  const { result } = useContext(calculatorContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className={style.mainContainer}>
+        <h1>Download Time Calculator</h1>
+        <Speed />
+        <FileSize />
+        {result != 0 && <Result />}
+      </div>
+      <Toaster />
+    </>
   );
 }
 
