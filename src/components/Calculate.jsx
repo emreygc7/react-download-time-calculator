@@ -27,7 +27,6 @@ const Calculate = () => {
     
         setConvertedSpeed(convertSpeed);
         setResult(convertFileSize / convertSpeed);
-        console.log(convertSpeed, convertFileSize);
       }
     }
 
